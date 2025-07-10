@@ -134,6 +134,7 @@
             // guestLogin
             // 
             this.guestLogin.AutoSize = true;
+            this.guestLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guestLogin.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guestLogin.ForeColor = System.Drawing.Color.RoyalBlue;
             this.guestLogin.Location = new System.Drawing.Point(105, 297);

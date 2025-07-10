@@ -16,7 +16,7 @@ namespace CafeManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GuestOrder());
+            Application.Run(new Login());
         }
     }
 }
