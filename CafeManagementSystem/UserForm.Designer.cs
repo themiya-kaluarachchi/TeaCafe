@@ -39,10 +39,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.TextBox();
+            this.UpassTb = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
-            this.phone = new System.Windows.Forms.TextBox();
-            this.userName = new System.Windows.Forms.TextBox();
+            this.UphoneTb = new System.Windows.Forms.TextBox();
+            this.UnameTb = new System.Windows.Forms.TextBox();
             this.itemsGV = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -121,10 +121,10 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.password);
+            this.panel1.Controls.Add(this.UpassTb);
             this.panel1.Controls.Add(this.addBtn);
-            this.panel1.Controls.Add(this.phone);
-            this.panel1.Controls.Add(this.userName);
+            this.panel1.Controls.Add(this.UphoneTb);
+            this.panel1.Controls.Add(this.UnameTb);
             this.panel1.Controls.Add(this.itemsGV);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(143, 32);
@@ -218,13 +218,13 @@
             this.label3.Text = "UserName";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // password
+            // UpassTb
             // 
-            this.password.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(146, 203);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(121, 26);
-            this.password.TabIndex = 15;
+            this.UpassTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpassTb.Location = new System.Drawing.Point(146, 203);
+            this.UpassTb.Name = "UpassTb";
+            this.UpassTb.Size = new System.Drawing.Size(121, 26);
+            this.UpassTb.TabIndex = 15;
             // 
             // addBtn
             // 
@@ -240,22 +240,23 @@
             this.addBtn.TabIndex = 11;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // phone
+            // UphoneTb
             // 
-            this.phone.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(146, 151);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(121, 26);
-            this.phone.TabIndex = 9;
+            this.UphoneTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UphoneTb.Location = new System.Drawing.Point(146, 151);
+            this.UphoneTb.Name = "UphoneTb";
+            this.UphoneTb.Size = new System.Drawing.Size(121, 26);
+            this.UphoneTb.TabIndex = 9;
             // 
-            // userName
+            // UnameTb
             // 
-            this.userName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName.Location = new System.Drawing.Point(146, 100);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(121, 26);
-            this.userName.TabIndex = 8;
+            this.UnameTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UnameTb.Location = new System.Drawing.Point(146, 100);
+            this.UnameTb.Name = "UnameTb";
+            this.UnameTb.Size = new System.Drawing.Size(121, 26);
+            this.UnameTb.TabIndex = 8;
             // 
             // itemsGV
             // 
@@ -315,10 +316,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox UpassTb;
         private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.TextBox phone;
-        private System.Windows.Forms.TextBox userName;
+        private System.Windows.Forms.TextBox UphoneTb;
+        private System.Windows.Forms.TextBox UnameTb;
         private System.Windows.Forms.DataGridView itemsGV;
         private System.Windows.Forms.Label label1;
     }
