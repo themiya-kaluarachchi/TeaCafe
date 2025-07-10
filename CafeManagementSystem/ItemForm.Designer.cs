@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.delete = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsGV)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             this.userBtn.TabIndex = 23;
             this.userBtn.Text = "Users";
             this.userBtn.UseVisualStyleBackColor = false;
+            this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
             // 
             // orderBtn
             // 
@@ -78,6 +80,7 @@
             this.orderBtn.TabIndex = 20;
             this.orderBtn.Text = "Order";
             this.orderBtn.UseVisualStyleBackColor = false;
+            this.orderBtn.Click += new System.EventHandler(this.orderBtn_Click);
             // 
             // closeBtn
             // 
@@ -94,6 +97,7 @@
             this.closeBtn.TabIndex = 21;
             this.closeBtn.Text = "X";
             this.closeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // logout
             // 
@@ -112,6 +116,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.edit);
             this.panel1.Controls.Add(this.delete);
             this.panel1.Controls.Add(this.label5);
@@ -132,7 +137,7 @@
             // itemPrice
             // 
             this.itemPrice.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemPrice.Location = new System.Drawing.Point(146, 237);
+            this.itemPrice.Location = new System.Drawing.Point(146, 256);
             this.itemPrice.Name = "itemPrice";
             this.itemPrice.Size = new System.Drawing.Size(121, 26);
             this.itemPrice.TabIndex = 15;
@@ -145,7 +150,7 @@
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.addBtn.Location = new System.Drawing.Point(15, 308);
+            this.addBtn.Location = new System.Drawing.Point(15, 327);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(52, 26);
             this.addBtn.TabIndex = 11;
@@ -155,7 +160,7 @@
             // itemName
             // 
             this.itemName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemName.Location = new System.Drawing.Point(146, 132);
+            this.itemName.Location = new System.Drawing.Point(146, 151);
             this.itemName.Name = "itemName";
             this.itemName.Size = new System.Drawing.Size(121, 26);
             this.itemName.TabIndex = 9;
@@ -163,7 +168,7 @@
             // itemNum
             // 
             this.itemNum.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemNum.Location = new System.Drawing.Point(146, 81);
+            this.itemNum.Location = new System.Drawing.Point(146, 100);
             this.itemNum.Name = "itemNum";
             this.itemNum.Size = new System.Drawing.Size(121, 26);
             this.itemNum.TabIndex = 8;
@@ -171,7 +176,7 @@
             // itemsGV
             // 
             this.itemsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itemsGV.Location = new System.Drawing.Point(295, 81);
+            this.itemsGV.Location = new System.Drawing.Point(295, 101);
             this.itemsGV.Name = "itemsGV";
             this.itemsGV.Size = new System.Drawing.Size(457, 418);
             this.itemsGV.TabIndex = 7;
@@ -183,7 +188,7 @@
             this.category.Items.AddRange(new object[] {
             "Food",
             "Beverage"});
-            this.category.Location = new System.Drawing.Point(146, 182);
+            this.category.Location = new System.Drawing.Point(146, 201);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(121, 31);
             this.category.TabIndex = 6;
@@ -196,7 +201,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(323, 14);
+            this.label1.Location = new System.Drawing.Point(323, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 29);
             this.label1.TabIndex = 5;
@@ -210,7 +215,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(10, 81);
+            this.label3.Location = new System.Drawing.Point(10, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 26);
             this.label3.TabIndex = 16;
@@ -224,7 +229,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(10, 132);
+            this.label4.Location = new System.Drawing.Point(10, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 26);
             this.label4.TabIndex = 17;
@@ -238,7 +243,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(10, 237);
+            this.label5.Location = new System.Drawing.Point(10, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 26);
             this.label5.TabIndex = 18;
@@ -253,7 +258,7 @@
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.delete.Location = new System.Drawing.Point(132, 308);
+            this.delete.Location = new System.Drawing.Point(132, 327);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(72, 26);
             this.delete.TabIndex = 19;
@@ -268,12 +273,26 @@
             this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.edit.Location = new System.Drawing.Point(74, 308);
+            this.edit.Location = new System.Drawing.Point(74, 327);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(52, 26);
             this.edit.TabIndex = 20;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(468, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 26);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Items List";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ItemForm
             // 
@@ -317,5 +336,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Label label2;
     }
 }

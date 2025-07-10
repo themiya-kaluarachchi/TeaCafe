@@ -257,6 +257,7 @@
             this.userBtn.TabIndex = 18;
             this.userBtn.Text = "Users";
             this.userBtn.UseVisualStyleBackColor = false;
+            this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
             // 
             // UserOrder
             // 
