@@ -21,5 +21,12 @@ namespace CafeManagementSystem
         {
             Application.Exit();
         }
+
+        private void guestLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }
