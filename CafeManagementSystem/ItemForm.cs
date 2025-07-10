@@ -42,5 +42,10 @@ namespace CafeManagementSystem
             UserForm uform = new UserForm();
             uform.Show();
         }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

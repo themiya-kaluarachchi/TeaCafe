@@ -19,7 +19,17 @@ namespace CafeManagementSystem
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Other\Documents\cafedb.mdf;Integrated Security=True;Connect Timeout=30");
-
+        void populate()
+        {
+            Con.Open();
+            String query = "select * from UsersTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            UsersGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
 
         private void closeBtn_Click(object sender, EventArgs e)
         {
@@ -51,9 +61,59 @@ namespace CafeManagementSystem
         {
             Con.Open();
             string query = "insert into UsersTbl values('" + UnameTb.Text + "','" + UphoneTb.Text + "','" + UpassTb.Text + "')";
-            
             SqlCommand cmd = new SqlCommand(query, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("User Successfully Created");
             Con.Close();
+            populate();
+        }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void UsersGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UnameTb.Text = UsersGV.SelectedRows[0].Cells[0].Value.ToString();
+            UphoneTb.Text = UsersGV.SelectedRows[0].Cells[1].Value.ToString();
+            UpassTb.Text = UsersGV.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (UphoneTb.Text == "")
+            {
+                MessageBox.Show("Select the user to delete");
+            }
+            else
+            {
+                Con.Open();
+                string query = "delete from UsersTbl where Uphone = '" + UphoneTb.Text + "' ";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("User successfully deleted");
+                Con.Close();
+                populate();
+            }
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            if (UphoneTb.Text == "" || UpassTb.Text == "" || UnameTb.Text == "")
+            {
+                MessageBox.Show("Fill All The Fields");
+            }
+            else
+            {
+                Con.Open();
+                string query = "update UsersTbl set Uname='" + UnameTb.Text + "', Upassword='" + UpassTb.Text + "' where Uphone='"+UphoneTb.Text+"' ";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("User Successfully Updated");
+                Con.Close();
+                populate();
+            }
         }
     }
 }
