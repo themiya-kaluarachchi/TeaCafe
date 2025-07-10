@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MyCafe = new System.Windows.Forms.Label();
@@ -36,12 +37,25 @@
             this.password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guestLogin = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.closeBtn = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.closeBtn);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(266, 0);
             this.panel1.Name = "panel1";
@@ -51,6 +65,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.panel2.Controls.Add(this.guestLogin);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.loginBtn);
             this.panel2.Controls.Add(this.password);
             this.panel2.Controls.Add(this.label2);
@@ -68,7 +84,7 @@
             this.MyCafe.AutoSize = true;
             this.MyCafe.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MyCafe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.MyCafe.Location = new System.Drawing.Point(84, 32);
+            this.MyCafe.Location = new System.Drawing.Point(84, 20);
             this.MyCafe.Name = "MyCafe";
             this.MyCafe.Size = new System.Drawing.Size(98, 29);
             this.MyCafe.TabIndex = 0;
@@ -80,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(13, 124);
+            this.label1.Location = new System.Drawing.Point(13, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 23);
             this.label1.TabIndex = 1;
@@ -90,7 +106,7 @@
             // userName
             // 
             this.userName.BackColor = System.Drawing.Color.SeaShell;
-            this.userName.Location = new System.Drawing.Point(115, 127);
+            this.userName.Location = new System.Drawing.Point(115, 168);
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(125, 20);
             this.userName.TabIndex = 2;
@@ -98,7 +114,7 @@
             // password
             // 
             this.password.BackColor = System.Drawing.Color.SeaShell;
-            this.password.Location = new System.Drawing.Point(116, 171);
+            this.password.Location = new System.Drawing.Point(116, 212);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(125, 20);
             this.password.TabIndex = 4;
@@ -108,7 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(14, 168);
+            this.label2.Location = new System.Drawing.Point(14, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 23);
             this.label2.TabIndex = 3;
@@ -121,14 +137,89 @@
             this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
             this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginBtn.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.loginBtn.Location = new System.Drawing.Point(89, 249);
+            this.loginBtn.Location = new System.Drawing.Point(89, 264);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(80, 30);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(60, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guestLogin
+            // 
+            this.guestLogin.AutoSize = true;
+            this.guestLogin.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guestLogin.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.guestLogin.Location = new System.Drawing.Point(105, 297);
+            this.guestLogin.Name = "guestLogin";
+            this.guestLogin.Size = new System.Drawing.Size(39, 15);
+            this.guestLogin.TabIndex = 7;
+            this.guestLogin.Text = "Guest";
+            this.guestLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.guestLogin.Click += new System.EventHandler(this.guestLogin_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label3.Location = new System.Drawing.Point(70, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(216, 29);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Cafe Management";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label4.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label4.Location = new System.Drawing.Point(127, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 29);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "System";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 90);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(247, 204);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.AutoSize = true;
+            this.closeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.closeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeBtn.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.closeBtn.Location = new System.Drawing.Point(322, 1);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(23, 23);
+            this.closeBtn.TabIndex = 4;
+            this.closeBtn.Text = "X";
+            this.closeBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // Form1
             // 
@@ -142,8 +233,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,6 +253,12 @@
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label guestLogin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label closeBtn;
     }
 }
 
