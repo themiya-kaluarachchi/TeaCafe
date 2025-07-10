@@ -43,5 +43,12 @@ namespace CafeManagementSystem
         {
             Application.Exit();
         }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            UserOrder uorder = new UserOrder();
+            uorder.Show();
+            this.Hide();
+        }
     }
 }

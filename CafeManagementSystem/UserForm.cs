@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CafeManagementSystem
 {
-    public partial class UserOrder : Form
+    public partial class UserForm : Form
     {
-        public UserOrder()
+        public UserForm()
         {
             InitializeComponent();
-        }
-
-        private void UserOrder_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -27,25 +22,25 @@ namespace CafeManagementSystem
             Application.Exit();
         }
 
-        private void guestLogin_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login login = new Login();
             login.Show();
         }
 
-        private void itemsBtn_Click(object sender, EventArgs e)
+        private void orderBtn_Click(object sender, EventArgs e)
         {
+            UserOrder uorder = new UserOrder();
+            uorder.Show();
             this.Hide();
-            ItemForm Item = new ItemForm();
-            Item.Show();
         }
 
-        private void userBtn_Click(object sender, EventArgs e)
+        private void itemsBtn_Click(object sender, EventArgs e)
         {
+            ItemForm item = new ItemForm();
+            item.Show();
             this.Hide();
-            UserForm user = new UserForm();
-            user.Show();
         }
     }
 }

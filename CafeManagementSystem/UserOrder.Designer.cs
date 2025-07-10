@@ -41,7 +41,7 @@
             this.category = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Label();
-            this.guestLogin = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.Label();
             this.itemsBtn = new System.Windows.Forms.Button();
             this.userBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -211,19 +211,21 @@
             this.closeBtn.TabIndex = 16;
             this.closeBtn.Text = "X";
             this.closeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
-            // guestLogin
+            // logout
             // 
-            this.guestLogin.AutoSize = true;
-            this.guestLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guestLogin.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guestLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.guestLogin.Location = new System.Drawing.Point(34, 576);
-            this.guestLogin.Name = "guestLogin";
-            this.guestLogin.Size = new System.Drawing.Size(59, 19);
-            this.guestLogin.TabIndex = 17;
-            this.guestLogin.Text = "Logout";
-            this.guestLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logout.AutoSize = true;
+            this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.logout.Location = new System.Drawing.Point(34, 576);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(59, 19);
+            this.logout.TabIndex = 17;
+            this.logout.Text = "Logout";
+            this.logout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.logout.Click += new System.EventHandler(this.guestLogin_Click);
             // 
             // itemsBtn
             // 
@@ -239,6 +241,7 @@
             this.itemsBtn.TabIndex = 16;
             this.itemsBtn.Text = "Items";
             this.itemsBtn.UseVisualStyleBackColor = false;
+            this.itemsBtn.Click += new System.EventHandler(this.itemsBtn_Click);
             // 
             // userBtn
             // 
@@ -254,6 +257,7 @@
             this.userBtn.TabIndex = 18;
             this.userBtn.Text = "Users";
             this.userBtn.UseVisualStyleBackColor = false;
+            this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
             // 
             // UserOrder
             // 
@@ -264,10 +268,11 @@
             this.Controls.Add(this.userBtn);
             this.Controls.Add(this.itemsBtn);
             this.Controls.Add(this.closeBtn);
-            this.Controls.Add(this.guestLogin);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserOrder";
             this.Load += new System.EventHandler(this.UserOrder_Load);
             this.panel1.ResumeLayout(false);
@@ -294,7 +299,7 @@
         private System.Windows.Forms.ComboBox category;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label closeBtn;
-        private System.Windows.Forms.Label guestLogin;
+        private System.Windows.Forms.Label logout;
         private System.Windows.Forms.Button itemsBtn;
         private System.Windows.Forms.Button userBtn;
     }
