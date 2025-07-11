@@ -58,7 +58,7 @@ namespace CafeManagementSystem
 
         private void itemsGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Name = ItemsGV.SelectedRows[0].Cells[1].Value.ToString();
+            item = ItemsGV.SelectedRows[0].Cells[1].Value.ToString();
             cat = ItemsGV.SelectedRows[0].Cells[2].Value.ToString();
             price = Convert.ToInt32(ItemsGV.SelectedRows[0].Cells[3].Value.ToString());
             flag = 1;
@@ -92,6 +92,11 @@ namespace CafeManagementSystem
             MessageBox.Show("Order Successfully Created");
             Con.Close();
             populate();
+        }
+
+        private void OrdersGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void addToCard_Click(object sender, EventArgs e)
