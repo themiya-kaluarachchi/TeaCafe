@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.Datelbl = new System.Windows.Forms.Label();
             this.QtyTb = new System.Windows.Forms.TextBox();
             this.placeOrder = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guestLogin = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
@@ -69,6 +69,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(771, 546);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(579, 511);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 26);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Rs";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Datelbl
             // 
@@ -138,6 +152,7 @@
             this.OrdersGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.OrdersGV.Size = new System.Drawing.Size(495, 159);
             this.OrdersGV.TabIndex = 12;
+            this.OrdersGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrdersGV_CellContentClick);
             // 
             // addToCard
             // 
@@ -262,20 +277,6 @@
             this.closeBtn.Text = "X";
             this.closeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(579, 511);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 26);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Rs";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // GuestOrder
             // 

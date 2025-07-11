@@ -128,6 +128,17 @@ namespace CafeManagementSystem
             populate();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ViewOrdersBtn_Click(object sender, EventArgs e)
+        {
+            ViewOrders view = new ViewOrders();
+            view.Show();
+        }
+
         private void addToCard_Click(object sender, EventArgs e)
         {
             if (QtyTb.Text == "")
@@ -154,7 +165,7 @@ namespace CafeManagementSystem
         
         private void itemsGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           Name = ItemsGV.SelectedRows[0].Cells[1].Value.ToString();
+           item = ItemsGV.SelectedRows[0].Cells[1].Value.ToString();
            cat = ItemsGV.SelectedRows[0].Cells[2].Value.ToString();
            price = Convert.ToInt32(ItemsGV.SelectedRows[0].Cells[3].Value.ToString());
            flag = 1;

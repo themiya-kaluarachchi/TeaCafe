@@ -178,6 +178,7 @@
             this.PasswordTb.BackColor = System.Drawing.Color.SeaShell;
             this.PasswordTb.Location = new System.Drawing.Point(116, 212);
             this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.PasswordChar = '*';
             this.PasswordTb.Size = new System.Drawing.Size(125, 20);
             this.PasswordTb.TabIndex = 4;
             // 
