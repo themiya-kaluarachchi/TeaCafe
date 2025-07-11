@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.userBtn = new System.Windows.Forms.Button();
             this.orderBtn = new System.Windows.Forms.Button();
             this.closeBtn = new System.Windows.Forms.Label();
@@ -39,15 +40,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.itemPrice = new System.Windows.Forms.TextBox();
+            this.PriceCb = new System.Windows.Forms.TextBox();
             this.addBtn = new System.Windows.Forms.Button();
-            this.itemName = new System.Windows.Forms.TextBox();
-            this.itemNum = new System.Windows.Forms.TextBox();
-            this.itemsGV = new System.Windows.Forms.DataGridView();
-            this.category = new System.Windows.Forms.ComboBox();
+            this.ItemNameTb = new System.Windows.Forms.TextBox();
+            this.ItemNumTb = new System.Windows.Forms.TextBox();
+            this.ItemsGV = new System.Windows.Forms.DataGridView();
+            this.CatCb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
             this.SuspendLayout();
             // 
             // userBtn
@@ -122,12 +123,12 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.itemPrice);
+            this.panel1.Controls.Add(this.PriceCb);
             this.panel1.Controls.Add(this.addBtn);
-            this.panel1.Controls.Add(this.itemName);
-            this.panel1.Controls.Add(this.itemNum);
-            this.panel1.Controls.Add(this.itemsGV);
-            this.panel1.Controls.Add(this.category);
+            this.panel1.Controls.Add(this.ItemNameTb);
+            this.panel1.Controls.Add(this.ItemNumTb);
+            this.panel1.Controls.Add(this.ItemsGV);
+            this.panel1.Controls.Add(this.CatCb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(143, 32);
             this.panel1.Name = "panel1";
@@ -162,6 +163,7 @@
             this.edit.TabIndex = 20;
             this.edit.Text = "Edit";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // delete
             // 
@@ -177,6 +179,7 @@
             this.delete.TabIndex = 19;
             this.delete.Text = "Delete";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // label5
             // 
@@ -220,13 +223,13 @@
             this.label3.Text = "ItemNum";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // itemPrice
+            // PriceCb
             // 
-            this.itemPrice.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemPrice.Location = new System.Drawing.Point(146, 256);
-            this.itemPrice.Name = "itemPrice";
-            this.itemPrice.Size = new System.Drawing.Size(121, 26);
-            this.itemPrice.TabIndex = 15;
+            this.PriceCb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceCb.Location = new System.Drawing.Point(146, 256);
+            this.PriceCb.Name = "PriceCb";
+            this.PriceCb.Size = new System.Drawing.Size(121, 26);
+            this.PriceCb.TabIndex = 15;
             // 
             // addBtn
             // 
@@ -244,44 +247,59 @@
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // itemName
+            // ItemNameTb
             // 
-            this.itemName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemName.Location = new System.Drawing.Point(146, 151);
-            this.itemName.Name = "itemName";
-            this.itemName.Size = new System.Drawing.Size(121, 26);
-            this.itemName.TabIndex = 9;
+            this.ItemNameTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemNameTb.Location = new System.Drawing.Point(146, 151);
+            this.ItemNameTb.Name = "ItemNameTb";
+            this.ItemNameTb.Size = new System.Drawing.Size(121, 26);
+            this.ItemNameTb.TabIndex = 9;
             // 
-            // itemNum
+            // ItemNumTb
             // 
-            this.itemNum.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemNum.Location = new System.Drawing.Point(146, 100);
-            this.itemNum.Name = "itemNum";
-            this.itemNum.Size = new System.Drawing.Size(121, 26);
-            this.itemNum.TabIndex = 8;
+            this.ItemNumTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemNumTb.Location = new System.Drawing.Point(146, 100);
+            this.ItemNumTb.Name = "ItemNumTb";
+            this.ItemNumTb.Size = new System.Drawing.Size(121, 26);
+            this.ItemNumTb.TabIndex = 8;
             // 
-            // itemsGV
+            // ItemsGV
             // 
-            this.itemsGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.itemsGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.itemsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itemsGV.Location = new System.Drawing.Point(295, 101);
-            this.itemsGV.Name = "itemsGV";
-            this.itemsGV.Size = new System.Drawing.Size(457, 418);
-            this.itemsGV.TabIndex = 7;
+            this.ItemsGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ItemsGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.ItemsGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.ItemsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.ItemsGV.Location = new System.Drawing.Point(295, 101);
+            this.ItemsGV.MultiSelect = false;
+            this.ItemsGV.Name = "ItemsGV";
+            this.ItemsGV.ReadOnly = true;
+            this.ItemsGV.RowHeadersVisible = false;
+            this.ItemsGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ItemsGV.Size = new System.Drawing.Size(457, 418);
+            this.ItemsGV.TabIndex = 7;
+            this.ItemsGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsGV_CellContentClick);
             // 
-            // category
+            // CatCb
             // 
-            this.category.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.category.FormattingEnabled = true;
-            this.category.Items.AddRange(new object[] {
+            this.CatCb.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CatCb.FormattingEnabled = true;
+            this.CatCb.Items.AddRange(new object[] {
             "Food",
             "Beverage"});
-            this.category.Location = new System.Drawing.Point(146, 201);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(121, 31);
-            this.category.TabIndex = 6;
-            this.category.Text = "Category";
+            this.CatCb.Location = new System.Drawing.Point(146, 201);
+            this.CatCb.Name = "CatCb";
+            this.CatCb.Size = new System.Drawing.Size(121, 31);
+            this.CatCb.TabIndex = 6;
+            this.CatCb.Text = "Category";
             // 
             // label1
             // 
@@ -312,9 +330,10 @@
             this.Name = "ItemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemForm";
+            this.Load += new System.EventHandler(this.ItemForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,12 +346,12 @@
         private System.Windows.Forms.Label closeBtn;
         private System.Windows.Forms.Label logout;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox itemPrice;
+        private System.Windows.Forms.TextBox PriceCb;
         private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.TextBox itemName;
-        private System.Windows.Forms.TextBox itemNum;
-        private System.Windows.Forms.DataGridView itemsGV;
-        private System.Windows.Forms.ComboBox category;
+        private System.Windows.Forms.TextBox ItemNameTb;
+        private System.Windows.Forms.TextBox ItemNumTb;
+        private System.Windows.Forms.DataGridView ItemsGV;
+        private System.Windows.Forms.ComboBox CatCb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
