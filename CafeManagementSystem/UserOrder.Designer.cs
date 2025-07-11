@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Datelbl = new System.Windows.Forms.Label();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.QtyTb = new System.Windows.Forms.TextBox();
             this.placeOrder = new System.Windows.Forms.Button();
@@ -45,8 +47,7 @@
             this.logout = new System.Windows.Forms.Label();
             this.itemsBtn = new System.Windows.Forms.Button();
             this.userBtn = new System.Windows.Forms.Button();
-            this.refreshBtn = new System.Windows.Forms.Button();
-            this.Datelbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Datelbl);
             this.panel1.Controls.Add(this.refreshBtn);
             this.panel1.Controls.Add(this.label4);
@@ -73,6 +75,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(771, 546);
             this.panel1.TabIndex = 1;
+            // 
+            // Datelbl
+            // 
+            this.Datelbl.AutoSize = true;
+            this.Datelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.Datelbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Datelbl.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Datelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.Datelbl.Location = new System.Drawing.Point(658, 22);
+            this.Datelbl.Name = "Datelbl";
+            this.Datelbl.Size = new System.Drawing.Size(46, 19);
+            this.Datelbl.TabIndex = 18;
+            this.Datelbl.Text = "Date";
+            this.Datelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Datelbl.Click += new System.EventHandler(this.Datelbl_Click);
+            // 
+            // refreshBtn
+            // 
+            this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshBtn.FlatAppearance.BorderSize = 0;
+            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBtn.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.refreshBtn.Location = new System.Drawing.Point(159, 95);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(65, 26);
+            this.refreshBtn.TabIndex = 17;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // label4
             // 
@@ -112,6 +145,7 @@
             this.placeOrder.TabIndex = 14;
             this.placeOrder.Text = "Place Order";
             this.placeOrder.UseVisualStyleBackColor = false;
+            this.placeOrder.Click += new System.EventHandler(this.placeOrder_Click);
             // 
             // label3
             // 
@@ -299,36 +333,19 @@
             this.userBtn.UseVisualStyleBackColor = false;
             this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
             // 
-            // refreshBtn
+            // label2
             // 
-            this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshBtn.FlatAppearance.BorderSize = 0;
-            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshBtn.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.refreshBtn.Location = new System.Drawing.Point(159, 95);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(65, 26);
-            this.refreshBtn.TabIndex = 17;
-            this.refreshBtn.Text = "Refresh";
-            this.refreshBtn.UseVisualStyleBackColor = false;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
-            // 
-            // Datelbl
-            // 
-            this.Datelbl.AutoSize = true;
-            this.Datelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.Datelbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Datelbl.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Datelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.Datelbl.Location = new System.Drawing.Point(658, 22);
-            this.Datelbl.Name = "Datelbl";
-            this.Datelbl.Size = new System.Drawing.Size(46, 19);
-            this.Datelbl.TabIndex = 18;
-            this.Datelbl.Text = "Date";
-            this.Datelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Datelbl.Click += new System.EventHandler(this.Datelbl_Click);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(578, 511);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 26);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Rs";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UserOrder
             // 
@@ -376,5 +393,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.Label Datelbl;
+        private System.Windows.Forms.Label label2;
     }
 }
