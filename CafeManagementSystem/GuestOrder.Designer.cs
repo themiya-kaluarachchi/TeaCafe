@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Datelbl = new System.Windows.Forms.Label();
             this.QtyTb = new System.Windows.Forms.TextBox();
             this.placeOrder = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.OrdersGV = new System.Windows.Forms.DataGridView();
             this.addToCard = new System.Windows.Forms.Button();
             this.OrderAmt = new System.Windows.Forms.Label();
-            this.sellerNameTb = new System.Windows.Forms.TextBox();
-            this.orderNum = new System.Windows.Forms.TextBox();
+            this.SellerNameTb = new System.Windows.Forms.TextBox();
+            this.OrderNumTb = new System.Windows.Forms.TextBox();
             this.ItemsGV = new System.Windows.Forms.DataGridView();
             this.categoryCb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guestLogin = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Label();
-            this.Datelbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Datelbl);
             this.panel1.Controls.Add(this.QtyTb);
             this.panel1.Controls.Add(this.placeOrder);
@@ -58,8 +60,8 @@
             this.panel1.Controls.Add(this.OrdersGV);
             this.panel1.Controls.Add(this.addToCard);
             this.panel1.Controls.Add(this.OrderAmt);
-            this.panel1.Controls.Add(this.sellerNameTb);
-            this.panel1.Controls.Add(this.orderNum);
+            this.panel1.Controls.Add(this.SellerNameTb);
+            this.panel1.Controls.Add(this.OrderNumTb);
             this.panel1.Controls.Add(this.ItemsGV);
             this.panel1.Controls.Add(this.categoryCb);
             this.panel1.Controls.Add(this.label1);
@@ -67,6 +69,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(771, 546);
             this.panel1.TabIndex = 0;
+            // 
+            // Datelbl
+            // 
+            this.Datelbl.AutoSize = true;
+            this.Datelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.Datelbl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Datelbl.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Datelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.Datelbl.Location = new System.Drawing.Point(659, 22);
+            this.Datelbl.Name = "Datelbl";
+            this.Datelbl.Size = new System.Drawing.Size(46, 19);
+            this.Datelbl.TabIndex = 16;
+            this.Datelbl.Text = "Date";
+            this.Datelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // QtyTb
             // 
@@ -92,6 +108,7 @@
             this.placeOrder.TabIndex = 14;
             this.placeOrder.Text = "Place Order";
             this.placeOrder.UseVisualStyleBackColor = false;
+            this.placeOrder.Click += new System.EventHandler(this.placeOrder_Click);
             // 
             // label3
             // 
@@ -152,24 +169,24 @@
             this.OrderAmt.Text = "Order Amount";
             this.OrderAmt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // sellerNameTb
+            // SellerNameTb
             // 
-            this.sellerNameTb.Enabled = false;
-            this.sellerNameTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellerNameTb.Location = new System.Drawing.Point(49, 175);
-            this.sellerNameTb.Name = "sellerNameTb";
-            this.sellerNameTb.Size = new System.Drawing.Size(121, 26);
-            this.sellerNameTb.TabIndex = 9;
-            this.sellerNameTb.Text = "Guest";
+            this.SellerNameTb.Enabled = false;
+            this.SellerNameTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellerNameTb.Location = new System.Drawing.Point(49, 175);
+            this.SellerNameTb.Name = "SellerNameTb";
+            this.SellerNameTb.Size = new System.Drawing.Size(121, 26);
+            this.SellerNameTb.TabIndex = 9;
+            this.SellerNameTb.Text = "Guest";
             // 
-            // orderNum
+            // OrderNumTb
             // 
-            this.orderNum.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderNum.Location = new System.Drawing.Point(49, 128);
-            this.orderNum.Name = "orderNum";
-            this.orderNum.Size = new System.Drawing.Size(121, 26);
-            this.orderNum.TabIndex = 8;
-            this.orderNum.Text = "OrderNum";
+            this.OrderNumTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderNumTb.Location = new System.Drawing.Point(49, 128);
+            this.OrderNumTb.Name = "OrderNumTb";
+            this.OrderNumTb.Size = new System.Drawing.Size(121, 26);
+            this.OrderNumTb.TabIndex = 8;
+            this.OrderNumTb.Text = "OrderNum";
             // 
             // ItemsGV
             // 
@@ -246,19 +263,19 @@
             this.closeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
-            // Datelbl
+            // label2
             // 
-            this.Datelbl.AutoSize = true;
-            this.Datelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.Datelbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Datelbl.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Datelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.Datelbl.Location = new System.Drawing.Point(659, 22);
-            this.Datelbl.Name = "Datelbl";
-            this.Datelbl.Size = new System.Drawing.Size(46, 19);
-            this.Datelbl.TabIndex = 16;
-            this.Datelbl.Text = "Date";
-            this.Datelbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(579, 511);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 26);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Rs";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // GuestOrder
             // 
@@ -291,8 +308,8 @@
         private System.Windows.Forms.ComboBox categoryCb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView ItemsGV;
-        private System.Windows.Forms.TextBox orderNum;
-        private System.Windows.Forms.TextBox sellerNameTb;
+        private System.Windows.Forms.TextBox OrderNumTb;
+        private System.Windows.Forms.TextBox SellerNameTb;
         private System.Windows.Forms.Button addToCard;
         private System.Windows.Forms.Label OrderAmt;
         private System.Windows.Forms.Label label3;
@@ -300,5 +317,6 @@
         private System.Windows.Forms.TextBox QtyTb;
         private System.Windows.Forms.Button placeOrder;
         private System.Windows.Forms.Label Datelbl;
+        private System.Windows.Forms.Label label2;
     }
 }

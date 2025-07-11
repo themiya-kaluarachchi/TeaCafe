@@ -58,7 +58,8 @@ namespace CafeManagementSystem
             table.Columns.Add("UnitPrice1", typeof(int));
             table.Columns.Add("Total1", typeof(int));
             OrdersGV.DataSource = table;
-            Datelbl.Text = DateTime.Today.Date.ToString("yyyy-MM-dd");
+            Datelbl.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
+            SellerName.Text = Login.user;
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -116,6 +117,17 @@ namespace CafeManagementSystem
 
         }
 
+        private void placeOrder_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            string query = "insert into OrdersTbl values(" + OrderNum.Text + ",'" + Datelbl.Text + "','" + SellerName.Text + "', " + OrderAmt.Text + ")";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Order Successfully Created");
+            Con.Close();
+            populate();
+        }
+
         private void addToCard_Click(object sender, EventArgs e)
         {
             if (QtyTb.Text == "")
@@ -135,7 +147,7 @@ namespace CafeManagementSystem
                 flag = 0;
             }
             sum = sum + total;
-            OrderAmt.Text = "Rs " + sum;
+            OrderAmt.Text = "" + sum;
 
         }
 
