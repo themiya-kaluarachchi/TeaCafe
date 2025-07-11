@@ -38,9 +38,9 @@
             this.guestLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginBtn = new System.Windows.Forms.Button();
-            this.password = new System.Windows.Forms.TextBox();
+            this.PasswordTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.userName = new System.Windows.Forms.TextBox();
+            this.UnameTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.myCafe = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -120,9 +120,9 @@
             this.panel2.Controls.Add(this.guestLogin);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.loginBtn);
-            this.panel2.Controls.Add(this.password);
+            this.panel2.Controls.Add(this.PasswordTb);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.userName);
+            this.panel2.Controls.Add(this.UnameTb);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.myCafe);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -173,13 +173,13 @@
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // password
+            // PasswordTb
             // 
-            this.password.BackColor = System.Drawing.Color.SeaShell;
-            this.password.Location = new System.Drawing.Point(116, 212);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(125, 20);
-            this.password.TabIndex = 4;
+            this.PasswordTb.BackColor = System.Drawing.Color.SeaShell;
+            this.PasswordTb.Location = new System.Drawing.Point(116, 212);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.Size = new System.Drawing.Size(125, 20);
+            this.PasswordTb.TabIndex = 4;
             // 
             // label2
             // 
@@ -193,13 +193,13 @@
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // userName
+            // UnameTb
             // 
-            this.userName.BackColor = System.Drawing.Color.SeaShell;
-            this.userName.Location = new System.Drawing.Point(115, 168);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(125, 20);
-            this.userName.TabIndex = 2;
+            this.UnameTb.BackColor = System.Drawing.Color.SeaShell;
+            this.UnameTb.Location = new System.Drawing.Point(115, 168);
+            this.UnameTb.Name = "UnameTb";
+            this.UnameTb.Size = new System.Drawing.Size(125, 20);
+            this.UnameTb.TabIndex = 2;
             // 
             // label1
             // 
@@ -252,9 +252,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label myCafe;
-        private System.Windows.Forms.TextBox userName;
+        private System.Windows.Forms.TextBox UnameTb;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.PictureBox pictureBox1;

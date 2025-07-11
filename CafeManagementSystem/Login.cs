@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CafeManagementSystem
 {
@@ -16,6 +17,9 @@ namespace CafeManagementSystem
         {
             InitializeComponent();
         }
+
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Other\Documents\cafedb.mdf;Integrated Security=True;Connect Timeout=30");
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -46,9 +50,29 @@ namespace CafeManagementSystem
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            UserOrder uorder = new UserOrder();
-            uorder.Show();
-            this.Hide();
+            
+            if (UnameTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Enter A Username or Password");
+            }
+            else
+            {
+                Con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select count(*) from UsersTbl where Uname='" + UnameTb.Text + "' and Upassword='" + PasswordTb.Text + "' ", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    UserOrder uorder = new UserOrder();
+                    uorder.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password");
+                }
+                Con.Close();
+            }
         }
     }
 }
