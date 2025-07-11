@@ -29,53 +29,72 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.quantity = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.QtyTb = new System.Windows.Forms.TextBox();
             this.placeOrder = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.OrdersGV = new System.Windows.Forms.DataGridView();
             this.addToCard = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.sellerName = new System.Windows.Forms.TextBox();
-            this.orderNum = new System.Windows.Forms.TextBox();
-            this.itemsGV = new System.Windows.Forms.DataGridView();
-            this.category = new System.Windows.Forms.ComboBox();
+            this.LabelAmnt = new System.Windows.Forms.Label();
+            this.SellerName = new System.Windows.Forms.TextBox();
+            this.OrderNum = new System.Windows.Forms.TextBox();
+            this.ItemsGV = new System.Windows.Forms.DataGridView();
+            this.categoryCb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Label();
             this.logout = new System.Windows.Forms.Label();
             this.itemsBtn = new System.Windows.Forms.Button();
             this.userBtn = new System.Windows.Forms.Button();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.quantity);
+            this.panel1.Controls.Add(this.refreshBtn);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.QtyTb);
             this.panel1.Controls.Add(this.placeOrder);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.OrdersGV);
             this.panel1.Controls.Add(this.addToCard);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.sellerName);
-            this.panel1.Controls.Add(this.orderNum);
-            this.panel1.Controls.Add(this.itemsGV);
-            this.panel1.Controls.Add(this.category);
+            this.panel1.Controls.Add(this.LabelAmnt);
+            this.panel1.Controls.Add(this.SellerName);
+            this.panel1.Controls.Add(this.OrderNum);
+            this.panel1.Controls.Add(this.ItemsGV);
+            this.panel1.Controls.Add(this.categoryCb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(143, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(771, 546);
             this.panel1.TabIndex = 1;
             // 
-            // quantity
+            // label4
             // 
-            this.quantity.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantity.Location = new System.Drawing.Point(49, 219);
-            this.quantity.Name = "quantity";
-            this.quantity.Size = new System.Drawing.Size(121, 26);
-            this.quantity.TabIndex = 15;
-            this.quantity.Text = "Quantity";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(413, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 29);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Place Order";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // QtyTb
+            // 
+            this.QtyTb.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QtyTb.Location = new System.Drawing.Point(418, 243);
+            this.QtyTb.Name = "QtyTb";
+            this.QtyTb.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.QtyTb.Size = new System.Drawing.Size(121, 26);
+            this.QtyTb.TabIndex = 15;
+            this.QtyTb.Text = "Quantity";
             // 
             // placeOrder
             // 
@@ -99,22 +118,27 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(413, 263);
+            this.label3.Location = new System.Drawing.Point(413, 318);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 29);
             this.label3.TabIndex = 13;
             this.label3.Text = "Your Order";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dataGridView1
+            // OrdersGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(230, 311);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(495, 188);
-            this.dataGridView1.TabIndex = 12;
+            this.OrdersGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OrdersGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.OrdersGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrdersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrdersGV.Location = new System.Drawing.Point(230, 360);
+            this.OrdersGV.MultiSelect = false;
+            this.OrdersGV.Name = "OrdersGV";
+            this.OrdersGV.ReadOnly = true;
+            this.OrdersGV.RowHeadersVisible = false;
+            this.OrdersGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.OrdersGV.Size = new System.Drawing.Size(495, 139);
+            this.OrdersGV.TabIndex = 12;
             // 
             // addToCard
             // 
@@ -124,67 +148,77 @@
             this.addToCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addToCard.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addToCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.addToCard.Location = new System.Drawing.Point(49, 262);
+            this.addToCard.Location = new System.Drawing.Point(418, 275);
             this.addToCard.Name = "addToCard";
             this.addToCard.Size = new System.Drawing.Size(121, 26);
             this.addToCard.TabIndex = 11;
             this.addToCard.Text = "Add to Card";
             this.addToCard.UseVisualStyleBackColor = false;
+            this.addToCard.Click += new System.EventHandler(this.addToCard_Click);
             // 
-            // label2
+            // LabelAmnt
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(612, 511);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 26);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Order Amount";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.LabelAmnt.AutoSize = true;
+            this.LabelAmnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.LabelAmnt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LabelAmnt.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelAmnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.LabelAmnt.Location = new System.Drawing.Point(612, 511);
+            this.LabelAmnt.Name = "LabelAmnt";
+            this.LabelAmnt.Size = new System.Drawing.Size(156, 26);
+            this.LabelAmnt.TabIndex = 10;
+            this.LabelAmnt.Text = "Order Amount";
+            this.LabelAmnt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // sellerName
+            // SellerName
             // 
-            this.sellerName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellerName.Location = new System.Drawing.Point(49, 175);
-            this.sellerName.Name = "sellerName";
-            this.sellerName.Size = new System.Drawing.Size(121, 26);
-            this.sellerName.TabIndex = 9;
-            this.sellerName.Text = "SellerName";
+            this.SellerName.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellerName.Location = new System.Drawing.Point(32, 186);
+            this.SellerName.Name = "SellerName";
+            this.SellerName.Size = new System.Drawing.Size(121, 26);
+            this.SellerName.TabIndex = 9;
+            this.SellerName.Text = "Seller";
             // 
-            // orderNum
+            // OrderNum
             // 
-            this.orderNum.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderNum.Location = new System.Drawing.Point(49, 128);
-            this.orderNum.Name = "orderNum";
-            this.orderNum.Size = new System.Drawing.Size(121, 26);
-            this.orderNum.TabIndex = 8;
-            this.orderNum.Text = "OrderNum";
+            this.OrderNum.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderNum.Location = new System.Drawing.Point(32, 139);
+            this.OrderNum.Name = "OrderNum";
+            this.OrderNum.Size = new System.Drawing.Size(121, 26);
+            this.OrderNum.TabIndex = 8;
+            this.OrderNum.Text = "OrderNum";
             // 
-            // itemsGV
+            // ItemsGV
             // 
-            this.itemsGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
-            this.itemsGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.itemsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itemsGV.Location = new System.Drawing.Point(230, 81);
-            this.itemsGV.Name = "itemsGV";
-            this.itemsGV.Size = new System.Drawing.Size(495, 150);
-            this.itemsGV.TabIndex = 7;
+            this.ItemsGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ItemsGV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.ItemsGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ItemsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsGV.Location = new System.Drawing.Point(230, 97);
+            this.ItemsGV.MultiSelect = false;
+            this.ItemsGV.Name = "ItemsGV";
+            this.ItemsGV.ReadOnly = true;
+            this.ItemsGV.RowHeadersVisible = false;
+            this.ItemsGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ItemsGV.Size = new System.Drawing.Size(495, 140);
+            this.ItemsGV.TabIndex = 7;
+            this.ItemsGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsGV_CellContentClick);
             // 
-            // category
+            // categoryCb
             // 
-            this.category.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.category.FormattingEnabled = true;
-            this.category.Items.AddRange(new object[] {
+            this.categoryCb.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryCb.FormattingEnabled = true;
+            this.categoryCb.Items.AddRange(new object[] {
             "Food",
             "Beverage"});
-            this.category.Location = new System.Drawing.Point(49, 81);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(121, 31);
-            this.category.TabIndex = 6;
-            this.category.Text = "Category";
+            this.categoryCb.Location = new System.Drawing.Point(32, 92);
+            this.categoryCb.Name = "categoryCb";
+            this.categoryCb.Size = new System.Drawing.Size(121, 31);
+            this.categoryCb.TabIndex = 6;
+            this.categoryCb.Text = "Category";
+            this.categoryCb.SelectedIndexChanged += new System.EventHandler(this.category_SelectedIndexChanged);
+            this.categoryCb.SelectionChangeCommitted += new System.EventHandler(this.category_SelectionChangeCommitted);
+            this.categoryCb.DropDownStyleChanged += new System.EventHandler(this.category_DropDownStyleChanged);
             // 
             // label1
             // 
@@ -263,6 +297,22 @@
             this.userBtn.UseVisualStyleBackColor = false;
             this.userBtn.Click += new System.EventHandler(this.userBtn_Click);
             // 
+            // refreshBtn
+            // 
+            this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshBtn.FlatAppearance.BorderSize = 0;
+            this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBtn.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(168)))), ((int)(((byte)(68)))));
+            this.refreshBtn.Location = new System.Drawing.Point(159, 95);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(65, 26);
+            this.refreshBtn.TabIndex = 17;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            // 
             // UserOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,8 +331,8 @@
             this.Load += new System.EventHandler(this.UserOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,20 +341,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox quantity;
+        private System.Windows.Forms.TextBox QtyTb;
         private System.Windows.Forms.Button placeOrder;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView OrdersGV;
         private System.Windows.Forms.Button addToCard;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox sellerName;
-        private System.Windows.Forms.TextBox orderNum;
-        private System.Windows.Forms.DataGridView itemsGV;
-        private System.Windows.Forms.ComboBox category;
+        private System.Windows.Forms.Label LabelAmnt;
+        private System.Windows.Forms.TextBox SellerName;
+        private System.Windows.Forms.TextBox OrderNum;
+        private System.Windows.Forms.DataGridView ItemsGV;
+        private System.Windows.Forms.ComboBox categoryCb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label closeBtn;
         private System.Windows.Forms.Label logout;
         private System.Windows.Forms.Button itemsBtn;
         private System.Windows.Forms.Button userBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button refreshBtn;
     }
 }
