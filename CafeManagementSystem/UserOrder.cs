@@ -58,6 +58,7 @@ namespace CafeManagementSystem
             table.Columns.Add("UnitPrice1", typeof(int));
             table.Columns.Add("Total1", typeof(int));
             OrdersGV.DataSource = table;
+            Datelbl.Text = DateTime.Today.Date.ToString("yyyy-MM-dd");
         }
 
         private void closeBtn_Click(object sender, EventArgs e)
@@ -110,6 +111,11 @@ namespace CafeManagementSystem
             populate();
         }
 
+        private void Datelbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void addToCard_Click(object sender, EventArgs e)
         {
             if (QtyTb.Text == "")
@@ -129,7 +135,7 @@ namespace CafeManagementSystem
                 flag = 0;
             }
             sum = sum + total;
-            LabelAmnt.Text = "Rs " + sum;
+            OrderAmt.Text = "Rs " + sum;
 
         }
 
