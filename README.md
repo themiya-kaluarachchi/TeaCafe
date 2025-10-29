@@ -34,7 +34,7 @@ This project was built for practice and learning purposes. Through this app, I p
 - Connecting C# to a SQL Server database
 - Handling user input and authentication
 - Managing orders and data using C# objects and SQL tables
-- Designing forms like Login, Order, and View 
+- Designing forms like Login, Order, and View Orders
 
 ---
 
