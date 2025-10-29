@@ -22,7 +22,7 @@ It was developed as a **learning project** to practice core concepts like databa
 - **C# Windows Forms**
 - **.NET Framework**
 - **SQL Server (Local DB or Express)**
-- **Visual Studio**
+- **Visual Studio 2022**
 
 ---
 
