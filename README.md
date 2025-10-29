@@ -1,4 +1,4 @@
-# 🫖 TeaCafe - C# Windows Forms Cafe Management System
+# 🫖 TeaCafe - C# Windows Forms Cafe Management System.
 
 **TeaCafe** is a desktop-based cafe management system built using **C# Windows Forms**.  
 It was developed as a **learning project** to practice core concepts like database connectivity, user login, order handling, and UI design.
@@ -55,4 +55,3 @@ This project was built for practice and learning purposes. Through this app, I p
 - Add reports and analytics
 
 ---
-.....
