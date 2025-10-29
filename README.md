@@ -54,4 +54,4 @@ This project was built for practice and learning purposes. Through this app, we 
 - Generate PDF receipts
 - Add reports and analytics
 
----
+
