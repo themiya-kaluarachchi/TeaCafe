@@ -56,7 +56,3 @@ This project was built for practice and learning purposes. Through this app, I p
 
 ---
 
-## 🧑‍💻 Author
-
-Created by **Themiya** for self-learning and university practice.  
-Feel free to fork, explore, or build on top of this!
