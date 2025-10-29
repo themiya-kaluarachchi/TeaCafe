@@ -28,7 +28,7 @@ It was developed as a **learning project** to practice core concepts like databa
 
 ## 📚 Learning Goals
 
-This project was built for practice and learning purposes. Through this app, I practiced:
+This project was built for practice and learning purposes. Through this app, we practiced:
 
 - Building desktop GUIs with Windows Forms
 - Connecting C# to a SQL Server database
